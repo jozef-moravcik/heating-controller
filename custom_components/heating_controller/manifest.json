@@ -1,0 +1,13 @@
+{
+  "domain": "heating_controller",
+  "name": "Heating Controller",
+  "documentation": "https://github.com/jozef-moravcik-homeassistant/heating-controller",
+  "dependencies": [],
+  "codeowners": ["@jozef-moravcik-homeassistant"],
+  "requirements": [],
+  "iot_class": "local_polling",
+  "config_flow": true,
+  "issue_tracker": "https://github.com/jozef-moravcik-homeassistant/heating-controller/issues",
+  "loggers": ["heating_controller"],
+  "version": "1.01.02"
+}

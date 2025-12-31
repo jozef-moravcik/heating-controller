@@ -1,0 +1,234 @@
+{
+  "config": {
+    "step": {
+      "control_parameters": {
+        "title": "Setting control parameters",
+        "description": "Set control parameters that are required for the heating controller logic",
+        "data": {
+          "timeout_for_heat_dhw_from_acc": "Timer for heating DHW from ACC (in minutes)",
+          "temperature_delta_limit_acc_dhw": "Max. temperature difference between DHW and ACC for stopping transfer",
+          "disabled_acc_temperature_limit": "Minimum temperature limit for enabling output when ACC is off",
+          "min_temperature_for_heating": "Minimum temperature in ACC required for heating",
+          "temperature_delta_limit_in_acc": "Maximum allowed temperature difference between ACC1 and ACC2",
+          "heating_source_temp_hysteresis": "Heating source temperature hysteresis",
+          "heating_source_command_debounce_delay": "Heating source command debounce delay (in seconds)",
+          "auxiliary_water_pump_for_heating": "Auxiliary pump for heating",
+          "auxiliary_pump_booster_time": "Duration the auxiliary pump is on (in minutes)"
+        }
+      },
+      "valve_control": {
+        "title": "Valve control parameters",
+        "description": "Setting operating parameters for valve control",
+        "data": {
+          "valve_output_acc_strict_mode": "Control mode for valves at the outputs from ACC",
+          "valve_input_acc_strict_mode": "Control mode for valves at inputs to ACC",
+          "valve_input_acc_closing_delay_when_heating_source_stop": "Delay in closing ACC input valves when heating source stop (in minutes)",
+          "valve_timeout": "Valve safety timeout (in seconds)"
+        }
+      },
+      "valves": {
+        "title": "Valves",
+        "description": "Select valves so that the heating system can control them",
+        "data": {
+          "valve_from_hp_to_acc_or_dhw": "Switching valve from heat pump to ACC or DHW",
+          "valve_output_acc1": "Shut-off valve for output from ACC 1",
+          "valve_output_acc2": "Shut-off valve for output from ACC 2",
+          "valve_input_acc1": "Shut-off valve for input to ACC 1",
+          "valve_input_acc2": "Shut-off valve for input to ACC 2",
+          "valve_from_acc_to_heat_or_dhw": "Switching valve from ACC to heating or DHW",
+          "valve_output_heating": "Shut-off valve for output to heating"
+        }
+      },
+      "temperature_sensors": {
+        "title": "Temperature Sensors",
+        "description": "Select temperature sensors entities that are required for the heating controller logic",
+        "data": {
+          "sensor_temp_acc1": "Temperature sensor for ACC 1",
+          "sensor_temp_acc2": "Temperature sensor for ACC 2",
+          "sensor_temp_dhw": "Temperature sensor for DHW"
+        }
+      },
+      "pumps": {
+        "title": "Water Pumps",
+        "description": "Select circulation water pumps so that the heating system can control them",
+        "data": {
+          "water_pump_acc_output": "Water pump for ACC output",
+          "water_pump_dhw": "Water pump for DHW",
+          "water_pump_floor_heating": "Water pump for floor heating",
+          "water_pump_heating": "Water pump for heating"
+        }
+      },
+      "thermostats": {
+        "title": "Heating system",
+        "description": "Select the thermostat statuses entities that are required for the heating controller logic",
+        "data": {
+          "thermostat_state": "Thermostats state (ON/OFF)",
+          "heating_state": "Heating state (Heats/Idle)",
+          "floor_heating_state": "Floor heating state (Heats/Idle)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "control_parameters": {
+        "title": "Setting control parameters",
+        "description": "Set control parameters that are required for the heating controller logic",
+        "data": {
+          "timeout_for_heat_dhw_from_acc": "Timer for heating DHW from ACC (in minutes)",
+          "temperature_delta_limit_acc_dhw": "Max. temperature difference between DHW and ACC for stopping transfer",
+          "disabled_acc_temperature_limit": "Minimum temperature limit for enabling output when ACC is off",
+          "min_temperature_for_heating": "Minimum temperature in ACC required for heating",
+          "temperature_delta_limit_in_acc": "Maximum allowed temperature difference between ACC1 and ACC2",
+          "heating_source_temp_hysteresis": "Heating source temperature hysteresis",
+          "heating_source_command_debounce_delay": "Heating source command debounce delay (in seconds)",
+          "auxiliary_water_pump_for_heating": "Auxiliary pump for heating",
+          "auxiliary_pump_booster_time": "Duration the auxiliary pump is on (in minutes)"
+        }
+      },
+      "valve_control": {
+        "title": "Valve control parameters",
+        "description": "Setting operating parameters for valve control",
+        "data": {
+          "valve_output_acc_strict_mode": "Control mode for valves at the outputs from ACC",
+          "valve_input_acc_strict_mode": "Control mode for valves at inputs to ACC",
+          "valve_input_acc_closing_delay_when_heating_source_stop": "Delay in closing ACC input valves when heating source stop (in minutes)",
+          "valve_timeout": "Valve safety timeout (in seconds)"
+        }
+      },
+      "valves": {
+        "title": "Valves",
+        "description": "Select valves so that the heating system can control them",
+        "data": {
+          "valve_from_hp_to_acc_or_dhw": "Switching valve from heat pump to ACC or DHW",
+          "valve_output_acc1": "Shut-off valve for output from ACC 1",
+          "valve_output_acc2": "Shut-off valve for output from ACC 2",
+          "valve_input_acc1": "Shut-off valve for input to ACC 1",
+          "valve_input_acc2": "Shut-off valve for input to ACC 2",
+          "valve_from_acc_to_heat_or_dhw": "Switching valve from ACC to heating or DHW",
+          "valve_output_heating": "Shut-off valve for output to heating"
+        }
+      },
+      "temperature_sensors": {
+        "title": "Temperature Sensors",
+        "description": "Select temperature sensors entities that are required for the heating controller logic",
+        "data": {
+          "sensor_temp_acc1": "Temperature sensor for ACC 1",
+          "sensor_temp_acc2": "Temperature sensor for ACC 2",
+          "sensor_temp_dhw": "Temperature sensor for DHW"
+        }
+      },
+
+      "pumps": {
+        "title": "Water Pumps",
+        "description": "Select circulation water pumps so that the heating system can control them",
+        "data": {
+          "water_pump_acc_output": "Water pump for ACC output",
+          "water_pump_dhw": "Water pump for DHW",
+          "water_pump_floor_heating": "Water pump for floor heating",
+          "water_pump_heating": "Water pump for heating"
+        }
+      },
+      "thermostats": {
+        "title": "Heating system",
+        "description": "Select the thermostat statuses entities that are required for the heating controller logic",
+        "data": {
+          "thermostat_state": "Thermostats state (ON/OFF)",
+          "heating_state": "Heating state (Heats/Idle)",
+          "floor_heating_state": "Floor heating state (Heats/Idle)"
+        }
+      }
+    }
+  },
+  "services": {
+    "system_started": {
+      "name": "System Started",
+      "description": "Initialize the heating controller system"
+    }
+  },
+  "selector": {
+    "auxiliary_water_pump_for_heating": {
+      "options": {
+        "0": "Disable",
+        "1": "Enable",
+        "2": "Booster"
+      }
+    },
+    "valve_output_acc_strict_mode": {
+      "options": {
+        "0": "Generic",
+        "1": "Moderate",
+        "2": "Strict"
+      }
+    },
+    "valve_input_acc_strict_mode": {
+      "options": {
+        "0": "Generic",
+        "1": "Moderate",
+        "2": "Strict"
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "automatic_mode": {
+        "name": "Automatic mode"
+      },
+      "heating_source_on_off": {
+        "name": "Heating source ON/OFF"
+      },
+      "acc1_enable": {
+        "name": "ACC 1 - ON/OFF"
+      },
+      "acc2_enable": {
+        "name": "ACC 2 - ON/OFF"
+      },
+      "hp_acc": {
+        "name": "HP to ACC"
+      },
+      "hp_dhw": {
+        "name": "HP to DHW"
+      },
+      "heat_dhw_from_acc": {
+        "name": "Heat DHW from ACC"
+      }
+    },
+    "sensor": {
+      "controll_command_hp_on_off": {
+        "name": "HP Control - ON/OFF"
+      },
+      "controll_command_hp_temperature": {
+        "name": "HP Control - Temperature"
+      }
+    },
+    "number": {
+      "dhw_target_temperature": {
+        "name": "Thermostat for DHW"
+      },
+      "acc_target_temperature": {
+        "name": "Thermostat for ACC"
+      }
+    },
+    "select": {
+      "heating_operating_mode": {
+        "name": "Heating operating mode",
+        "state": {
+          "0": "Manual mode",
+          "1": "Only DHW",
+          "2": "Cycle: 1.PDHW > 2.DHW",
+          "3": "Only ACC",
+          "4": "Only ACC + PDHW",
+          "5": "Cycle: 1.DHW > 2.ACC",
+          "6": "Cycle: 1.P-DHW > 2.DHW > 3.ACC"
+        }
+      }
+    }
+  }
+}

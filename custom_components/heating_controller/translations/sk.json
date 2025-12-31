@@ -1,0 +1,236 @@
+{
+  "config": {
+    "step": {
+      "control_parameters": {
+        "title": "Nastavenie riadiacich parametrov",
+        "description": "Nastavte riadiace parametre potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "timeout_for_heat_dhw_from_acc": "Časovač pre ohrev TÚV z ACC (v minútach)",
+          "temperature_delta_limit_acc_dhw": "Max. teplotný rozdiel medzi TÚV a ACC pre zastavenie prenosu",
+          "disabled_acc_temperature_limit": "Minimálna teplotná hranica pre povolenie výstupu keď je ACC vypnutý",
+          "min_temperature_for_heating": "Minimálna teplota v ACC potrebná pre kúrenie",
+          "temperature_delta_limit_in_acc": "Maximálny povolený teplotný rozdiel medzi ACC1 a ACC2",
+          "heating_source_temp_hysteresis": "Nastavenie teplotnej hysterézie pre riadenie zdroja kúrenia",
+          "heating_source_command_debounce_delay": "Oneskorenie príkazu pre riadenie zdroja kúrenia (v sekundách)",
+          "auxiliary_water_pump_for_heating": "Pomocné čerpadlo pre vykurovanie",
+          "auxiliary_pump_booster_time": "Trvanie zapnutia pomocného čerpadla (v minútach)"
+        }
+      },
+      "valve_control": {
+        "title": "Ovládanie ventilov",
+        "description": "Nastavenie prevádzkových parametrov pre ovládanie ventilov",
+        "data": {
+          "valve_output_acc_strict_mode": "Režim ovládania ventilov na výstupoch z ACC",
+          "valve_input_acc_strict_mode": "Režim ovládania ventilov na vstupoch do ACC",
+          "valve_input_acc_closing_delay_when_heating_source_stop": "Oneskorenie zatvorenia ventilov na vstupoch do ACC pri vypnutí zdroja kúrenia (v minútach)",
+          "valve_timeout": "Bezpečnostný timeout ventilu (v sekundách)"
+        }
+      },
+      "valves": {
+        "title": "Ventily",
+        "description": "Vyberte ventily, aby ich vykurovací systém mohol ovládať",
+        "data": {
+          "valve_from_hp_to_acc_or_dhw": "Prepínací ventil z tepelného čerpadla do ACC alebo TÚV",
+          "valve_output_acc1": "Uzatvárací ventil pre výstup z ACC 1",
+          "valve_output_acc2": "Uzatvárací ventil pre výstup z ACC 2",
+          "valve_input_acc1": "Uzatvárací ventil pre vstup do ACC 1",
+          "valve_input_acc2": "Uzatvárací ventil pre vstup do ACC 2",
+          "valve_from_acc_to_heat_or_dhw": "Prepínací ventil z ACC do vykurovania alebo TÚV",
+          "valve_output_heating": "Uzatvárací ventil pre výstup do vykurovania"
+        }
+      },
+      "temperature_sensors": {
+        "title": "Teplotné senzory",
+        "description": "Vyberte teplotné senzory potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "sensor_temp_acc1": "Teplotný senzor pre ACC 1",
+          "sensor_temp_acc2": "Teplotný senzor pre ACC 2",
+          "sensor_temp_dhw": "Teplotný senzor pre TÚV"
+        }
+      },
+      "pumps": {
+        "title": "Obehové čerpadlá",
+        "description": "Vyberte obehové čerpadlá, aby ich vykurovací systém mohol ovládať",
+        "data": {
+          "water_pump_acc_output": "Čerpadlo pre výstup z ACC",
+          "water_pump_dhw": "Čerpadlo pre TÚV",
+          "water_pump_floor_heating": "Čerpadlo pre podlahové vykurovanie",
+          "water_pump_heating": "Čerpadlo pre vykurovanie"
+        }
+      },
+      "thermostats": {
+        "title": "Vykurovací systém",
+        "description": "Vyberte stavové entity termostatov potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "thermostat_state": "Stav termostatov (ZAP/VYP)",
+          "heating_state": "Stav vykurovania (Kúri/Nečinný)",
+          "floor_heating_state": "Stav podlahového vykurovania (Kúri/Nečinný)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nepodarilo sa pripojiť",
+      "unknown": "Neočakávaná chyba"
+    },
+    "abort": {
+      "already_configured": "Zariadenie je už nakonfigurované"
+    }
+  },
+  "options": {
+    "step": {
+      "control_parameters": {
+        "title": "Nastavenie riadiacich parametrov",
+        "description": "Nastavte riadiace parametre potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "timeout_for_heat_dhw_from_acc": "Časovač pre ohrev TÚV z ACC (v minútach)",
+          "temperature_delta_limit_acc_dhw": "Max. teplotný rozdiel medzi TÚV a ACC pre zastavenie prenosu",
+          "disabled_acc_temperature_limit": "Minimálna teplotná hranica pre povolenie výstupu keď je ACC vypnutý",
+          "min_temperature_for_heating": "Minimálna teplota v ACC potrebná pre kúrenie",
+          "auxiliary_water_pump_for_heating": "Pomocné čerpadlo pre vykurovanie",
+          "auxiliary_pump_booster_time": "Trvanie zapnutia pomocného čerpadla (v minútach)",
+          "temperature_delta_limit_in_acc": "Maximálny povolený teplotný rozdiel medzi ACC1 a ACC2",
+          "valve_output_acc_strict_mode": "Režim ovládania ventilov na výstupoch z ACC",
+          "valve_input_acc_strict_mode": "Režim ovládania ventilov na vstupoch do ACC",
+          "valve_timeout": "Bezpečnostný timeout ventilu (v sekundách)",
+          "heating_source_temp_hysteresis": "Nastavenie teplotnej hysterézie pre riadenie zdroja kúrenia",
+          "heating_source_command_debounce_delay": "Oneskorenie príkazu pre riadenie zdroja kúrenia (v sekundách)"
+        }
+      },
+      "valve_control": {
+        "title": "Ovládanie ventilov",
+        "description": "Nastavenie prevádzkových parametrov pre ovládanie ventilov",
+        "data": {
+          "valve_output_acc_strict_mode": "Režim ovládania ventilov na výstupoch z ACC",
+          "valve_input_acc_strict_mode": "Režim ovládania ventilov na vstupoch do ACC",
+          "valve_input_acc_closing_delay_when_heating_source_stop": "Oneskorenie zatvorenia ventilov na vstupoch do ACC pri vypnutí zdroja kúrenia (v minútach)",
+          "valve_timeout": "Bezpečnostný timeout ventilu (v sekundách)"
+        }
+      },
+      "valves": {
+        "title": "Ventily",
+        "description": "Vyberte ventily, aby ich vykurovací systém mohol ovládať",
+        "data": {
+          "valve_from_hp_to_acc_or_dhw": "Prepínací ventil z tepelného čerpadla do ACC alebo TÚV",
+          "valve_output_acc1": "Uzatvárací ventil pre výstup z ACC 1",
+          "valve_output_acc2": "Uzatvárací ventil pre výstup z ACC 2",
+          "valve_input_acc1": "Uzatvárací ventil pre vstup do ACC 1",
+          "valve_input_acc2": "Uzatvárací ventil pre vstup do ACC 2",
+          "valve_from_acc_to_heat_or_dhw": "Prepínací ventil z ACC do vykurovania alebo TÚV",
+          "valve_output_heating": "Uzatvárací ventil pre výstup do vykurovania"
+        }
+      },
+      "temperature_sensors": {
+        "title": "Teplotné senzory",
+        "description": "Vyberte teplotné senzory potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "sensor_temp_acc1": "Teplotný senzor pre ACC 1",
+          "sensor_temp_acc2": "Teplotný senzor pre ACC 2",
+          "sensor_temp_dhw": "Teplotný senzor pre TÚV"
+        }
+      },
+      "pumps": {
+        "title": "Obehové čerpadlá",
+        "description": "Vyberte obehové čerpadlá, aby ich vykurovací systém mohol ovládať",
+        "data": {
+          "water_pump_acc_output": "Čerpadlo pre výstup z ACC",
+          "water_pump_dhw": "Čerpadlo pre TÚV",
+          "water_pump_floor_heating": "Čerpadlo pre podlahové vykurovanie",
+          "water_pump_heating": "Čerpadlo pre vykurovanie"
+        }
+      },
+      "thermostats": {
+        "title": "Vykurovací systém",
+        "description": "Vyberte stavové entity termostatov potrebné pre logiku riadenia vykurovania",
+        "data": {
+          "thermostat_state": "Stav termostatov (ZAP/VYP)",
+          "heating_state": "Stav vykurovania (Kúri/Nečinný)",
+          "floor_heating_state": "Stav podlahového vykurovania (Kúri/Nečinný)"
+        }
+      }
+    }
+  },
+  "services": {
+    "system_started": {
+      "name": "Systém spustený",
+      "description": "Inicializovať systém riadenia vykurovania"
+    }
+  },
+  "selector": {
+    "auxiliary_water_pump_for_heating": {
+      "options": {
+        "0": "Nepovolené",
+        "1": "Povolené",
+        "2": "Booster"
+      }
+    },
+    "valve_output_acc_strict_mode": {
+      "options": {
+        "0": "Generický",
+        "1": "Stredný",
+        "2": "Prísny"
+      }
+    },
+    "valve_input_acc_strict_mode": {
+      "options": {
+        "0": "Generický",
+        "1": "Stredný",
+        "2": "Prísny"
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "automatic_mode": {
+        "name": "Automatický režim"
+      },
+      "heating_source_on_off": {
+        "name": "Zdroj tepla ZAP/VYP"
+      },
+      "acc1_enable": {
+        "name": "ACC 1 - ZAP/VYP"
+      },
+      "acc2_enable": {
+        "name": "ACC 2 - ZAP/VYP"
+      },
+      "hp_acc": {
+        "name": "TČ do ACC"
+      },
+      "hp_dhw": {
+        "name": "TČ do TÚV"
+      },
+      "heat_dhw_from_acc": {
+        "name": "Ohrev TÚV z ACC"
+      }
+    },
+    "sensor": {
+      "controll_command_hp_on_off": {
+        "name": "Riadenie TČ - ZAP/VYP"
+      },
+      "controll_command_hp_temperature": {
+        "name": "Riadenie TČ - Teplota"
+      }
+    },
+    "number": {
+      "dhw_target_temperature": {
+        "name": "Termostat pre TÚV"
+      },
+      "acc_target_temperature": {
+        "name": "Termostat pre ACC"
+      }
+    },
+    "select": {
+      "heating_operating_mode": {
+        "name": "Prevádzkový režim ohrevu",
+        "state": {
+          "0": "Manuálny režim",
+          "1": "Len TÚV",
+          "2": "Cyklus 1.P-TÚV > 2.TÚV",
+          "3": "Len ACC",
+          "4": "Len ACC + P-TÚV",
+          "5": "Cyklus: 1.TÚV > 2.ACC)",
+          "6": "Cyklus: 1.P-TÚV > 2.TÚV > 3.ACC)"
+        }
+      }
+    }
+  }
+}

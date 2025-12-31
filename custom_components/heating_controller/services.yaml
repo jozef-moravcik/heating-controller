@@ -1,0 +1,4 @@
+system_started:
+  name: System Started
+  description: Initialize the heating controller system
+  fields: {}
