@@ -30,6 +30,20 @@ async def async_setup_entry(
         HeatingControllerSensor(
             instance,
             entry.entry_id,
+            ENTITY_CONTROL_COMMAND_ON_OFF,
+            "TC - ON/OFF",
+            "mdi:check-circle",
+        ),
+        HeatingControllerSensor(
+            instance,
+            entry.entry_id,
+            ENTITY_CONTROL_COMMAND_TEMPERATURE,
+            "TC - Temperature",
+            "mdi:thermometer-water",
+        ),
+        HeatingControllerSensor(
+            instance,
+            entry.entry_id,
             ENTITY_CONTROL_COMMAND_HP_ON_OFF,
             "TC - ON/OFF",
             "mdi:check-circle",

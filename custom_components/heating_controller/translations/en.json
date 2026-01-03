@@ -201,6 +201,12 @@
       }
     },
     "sensor": {
+      "controll_command_on_off": {
+        "name": "Control - ON/OFF"
+      },
+      "controll_command_temperature": {
+        "name": "Control - Temperature"
+      },
       "controll_command_hp_on_off": {
         "name": "HP Control - ON/OFF"
       },
@@ -210,10 +216,10 @@
     },
     "number": {
       "dhw_target_temperature": {
-        "name": "Thermostat for DHW"
+        "name": "Set DHW"
       },
       "acc_target_temperature": {
-        "name": "Thermostat for ACC"
+        "name": "Set ACC"
       }
     },
     "select": {

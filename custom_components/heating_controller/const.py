@@ -95,6 +95,8 @@ ENTITY_DHW_TARGET_TEMPERATURE = "dhw_target_temperature"
 ENTITY_ACC_TARGET_TEMPERATURE = "acc_target_temperature"
 ENTITY_HEATING_OPERATING_MODE = "heating_operating_mode"
 ENTITY_HEATING_SOURCE_ON_OFF = "heating_source_on_off"
+ENTITY_CONTROL_COMMAND_ON_OFF = "controll_command_on_off"
+ENTITY_CONTROL_COMMAND_TEMPERATURE = "controll_command_temperature"
 ENTITY_CONTROL_COMMAND_HP_ON_OFF = "controll_command_hp_on_off"
 ENTITY_CONTROL_COMMAND_HP_TEMPERATURE = "controll_command_hp_temperature"
 
@@ -208,7 +210,7 @@ DEFAULT_FALLBACK_CHECK_INTERVAL = 60
 DEBOUNCE_DELAY = 0.2  # seconds - it groups all changes within this time period (due to better performance)
 
 # Načítanie predvolených hodnôt základných konfiguračných parametrov
-DEFAULT_TIMEOUT_HEAT_DHW = 60
+DEFAULT_TIMEOUT_HEAT_DHW = 120
 DEFAULT_TEMPERATURE_DELTA_LIMIT_ACC_DHW = 2.0
 DEFAULT_DISABLED_ACC_TEMPERATURE_LIMIT = 40
 DEFAULT_MIN_TEMPERATURE_FOR_HEATING = 35
@@ -216,14 +218,16 @@ DEFAULT_TEMPERATURE_DELTA_LIMIT_IN_ACC = 2.0
 DEFAULT_HEATING_SOURCE_TEMP_HYSTERESIS = 5
 DEFAULT_HEATING_SOURCE_COMMAND_DEBOUNCE_DELAY = 20  # in seconds - it groups all changes within this time period
 DEFAULT_AUXILIARY_WATER_PUMP_FOR_HEATING = AUXILIARY_PUMP_DISABLE
-DEFAULT_AUXILIARY_PUMP_BOOSTER_TIME = 5  # in minutes
+DEFAULT_AUXILIARY_PUMP_BOOSTER_TIME = 5 # in minutes
 
 DEFAULT_VALVE_OUTPUT_ACC_STRICT_MODE = VALVE_MODE_STRICT
 DEFAULT_VALVE_INPUT_ACC_STRICT_MODE = VALVE_MODE_STRICT
 DEFAULT_VALVE_INPUT_ACC_CLOSING_DELAY_WHEN_HEATING_SOURCE_STOP = 3  # in minutes
 DEFAULT_VALVE_TIMEOUT = 15
 
-MAX_TEMPERATURE_LIMIT = 90
+MIN_TEMPERATURE_LIMIT = 20      # Minimum temperature limit for water tanks)
+MAX_TEMPERATURE_LIMIT = 90      # Maximum temperature limit in General (for heating source and for water tanks)
+MAX_TEMPERATURE_LIMIT_HP = 65   # Maximum temperature limit for heating pump
 
 # Update interval
 UPDATE_INTERVAL = 60  # in seconds

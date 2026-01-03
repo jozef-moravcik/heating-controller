@@ -9,5 +9,5 @@
   "issue_tracker": "https://github.com/jozef-moravcik-homeassistant/heating-controller/issues",
   "loggers": ["heating_controller"],
   "requirements": [],
-  "version": "1.01.02"
+  "version": "1.01.03"
 }

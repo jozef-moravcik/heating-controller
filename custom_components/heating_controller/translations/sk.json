@@ -203,6 +203,12 @@
       }
     },
     "sensor": {
+      "controll_command_on_off": {
+        "name": "Riadenie - ZAP/VYP"
+      },
+      "controll_command_temperature": {
+        "name": "Riadenie - Teplota"
+      },
       "controll_command_hp_on_off": {
         "name": "Riadenie TČ - ZAP/VYP"
       },
@@ -212,10 +218,10 @@
     },
     "number": {
       "dhw_target_temperature": {
-        "name": "Termostat pre TÚV"
+        "name": "Nast. TÚV"
       },
       "acc_target_temperature": {
-        "name": "Termostat pre ACC"
+        "name": "Nast. ACC"
       }
     },
     "select": {
